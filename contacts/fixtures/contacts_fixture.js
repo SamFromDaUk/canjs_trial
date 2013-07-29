@@ -1,4 +1,4 @@
-var Contacts_Fixture_Contact = [{
+app.Contacts_Fixture_Contact = [{
     id: 1,
     name: 'William',
     address: '1 CanJS Way',
@@ -22,5 +22,5 @@ var Contacts_Fixture_Contact = [{
 }];
 
 can.fixture('GET /contacts', function(){
-  return [Contacts_Fixture_Contact];
+  return [app.Contacts_Fixture_Contact];
 });

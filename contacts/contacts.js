@@ -6,7 +6,7 @@ steal(
     "//contacts/fixtures/fixtures.js",
     "//contacts/public/css/css.js"
 ).then(function() {
-    new Contacts_Controller_Core($('body').find('div.contacts'), {
+    new app.Contacts_Controller_Core($('body').find('div.contacts'), {
         limit: 20
     });
 });

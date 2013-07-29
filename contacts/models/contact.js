@@ -1,4 +1,4 @@
-var Contacts_Model_Contact = can.Model({
+app.Contacts_Model_Contact = can.Model({
     findAll: 'GET /contacts'
 },{
 

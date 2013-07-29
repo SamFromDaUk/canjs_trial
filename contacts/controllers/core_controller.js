@@ -1,4 +1,4 @@
-var Contacts_Controller_Core = can.Control({
+app.Contacts_Controller_Core = can.Control({
     init: function(){
         this.getContacts(this.options.limit).done(function() {
             this.renderContacts();
@@ -9,7 +9,7 @@ var Contacts_Controller_Core = can.Control({
         var self = this;
 
         return $.Deferred(function(obj) {
-            Contacts_Model_Contact.findAll({
+            app.Contacts_Model_Contact.findAll({
                 limit: self.options.limit
             }).done(function(contacts) {
                 self.contacts = contacts;
