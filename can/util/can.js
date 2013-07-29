@@ -9,7 +9,7 @@ steal(function(){
 		// Returns `true` if something looks like a deferred.
 		return obj && isFunction(obj.then) && isFunction(obj.pipe);
 	};
-	
+
 	var cid = 0;
 	can.cid = function(object, name){
 		if(object._cid){
