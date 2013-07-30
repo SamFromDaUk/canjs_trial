@@ -22,5 +22,5 @@ app.Contacts_Fixture_Contact = [{
 }];
 
 can.fixture('GET /contacts', function(){
-  return [app.Contacts_Fixture_Contact];
+  return app.Contacts_Fixture_Contact;
 });

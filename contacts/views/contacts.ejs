@@ -1,0 +1,7 @@
+<ul class="contact-list">
+    <% list(contacts, function(contact){ %>
+        <%== can.view.render('//contacts/views/contact.ejs', {
+            contact: contact
+        }) %>
+    <% }) %>
+</ul>

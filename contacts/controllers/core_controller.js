@@ -1,7 +1,9 @@
 app.Contacts_Controller_Core = can.Control({
     init: function(){
+        var self = this;
+        this.renderCore();
         this.getContacts(this.options.limit).done(function() {
-            this.renderContacts();
+            self.renderContacts();
         });
     },
 
@@ -20,7 +22,21 @@ app.Contacts_Controller_Core = can.Control({
         });
     },
 
-    renderContacts: function() {
+    renderCore: function() {
+        this.element.html(can.view('//contacts/views/core.ejs'));
+    },
 
+    renderContacts: function() {
+        this.element.append(
+            can.view('//contacts/views/contacts.ejs', {
+                contacts: this.contacts
+            })
+        );
+    },
+
+    'ul.contact-list li.contact button click': function(el, ev) {
+        var model = el.closest('li.contact').model();
+
+        model.attr('clicks', ++model.attr('clicks'));
     }
 });
