@@ -35,8 +35,10 @@ app.Contacts_Controller_Core = can.Control({
     },
 
     'ul.contact-list li.contact button click': function(el, ev) {
-        var model = el.closest('li.contact').model();
+        var model = el.closest('li.contact').data('model'),
+            count = model.attr('count');
 
-        model.attr('clicks', ++model.attr('clicks'));
+
+        model.attr('count', ++count);
     }
 });

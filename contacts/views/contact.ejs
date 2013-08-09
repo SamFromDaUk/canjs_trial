@@ -1,6 +1,6 @@
-<li class="contact" <%= contact %>>
+<li class="contact" <%= (el) -> can.data( el, 'model', contact ) %>>
     <span><strong><%= contact.attr('name') %></strong></span>
     <span><%= contact.attr('email') %></span>
-    <span><%= contact.attr('clicks') %></span>
+    <span><%= contact.attr('count') %></span>
     <button>+</button>
 </li>
